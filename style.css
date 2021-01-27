@@ -1,6 +1,8 @@
 body{
     padding: 100px;
 }
+
+
 .submit-area{
     margin-top: 50px;
     padding: 40px;
@@ -29,16 +31,3 @@ body{
     width: 80%;
 }
 
-@media only screen and (min-width: 800px) {
-    .email-area{
-        width: 70%;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .email-area{
-        position: relative;
-        left:-80px;
-        width: 100%;
-    }
-  }
