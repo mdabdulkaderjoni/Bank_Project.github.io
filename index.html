@@ -16,7 +16,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="deposit status">
                         <h5>Deposit</h5>
-                        <h2>$00</h2>
+                        <h2>$ <span id="currentDeposit">0</span></h2>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -28,7 +28,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="balance status">
                         <h5>Balance</h5>
-                        <h2>$1200</h2>
+                        <h2>$ <span id="currentBalance">1200</span></h2>
                     </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@
                     <div class="submit-area">
                         <h4>Deposit</h4>
                         <div class="d-flex">
-                            <input type="text" class="form-control me-2"><br>
-                            <button class="btn btn-success">Deposit</button>
+                            <input type="text" class="form-control me-2" id="depositValue"><br>
+                            <button class="btn btn-success" id="addDeposit">Deposit</button>
                         </div>
                     </div>
                 </div>
