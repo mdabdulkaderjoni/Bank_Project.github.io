@@ -14,10 +14,23 @@ enterBtn.addEventListener('click', function () {
 //function for events
 
 function updateSpanText(id, Number) {
+    const getBalance=document.getElementById('currentBalance').innerText;
+    const checkZero=parseFloat(getBalance);
+
+    if(checkZero==0){
+          return alert('Can not withdraw, Your balance is over');
+    } 
     const current = document.getElementById(id).innerText;
     const currentNumber = parseFloat(current);
     const total = currentNumber + Number;
     document.getElementById(id).innerText = total;
+
+    if(total<=0 ){
+        document.getElementById(id).innerText=0;        
+        alert('Your balance is over'); 
+        
+    }
+    
 }
 
 //deposit button event handler
@@ -27,15 +40,16 @@ depositBtn.addEventListener('click', function () {
     const depositAmount = document.getElementById('depositValue').value;
     const depositNumber = parseFloat(depositAmount);
 
-        //adding value in deposit
+    document.getElementById('depositValue').value = '';
+
+        if(depositNumber>0){
+            //adding value in deposit
         updateSpanText('currentDeposit', depositNumber);
 
         // //adding value in balance
         updateSpanText('currentBalance', depositNumber);
-
-        document.getElementById('depositValue').value = '';
-  
-    
+   
+        }
 
 })
 
@@ -47,13 +61,17 @@ withdrawBtn.addEventListener('click', function () {
     const withdrawAmount = document.getElementById('withdrawValue').value;
     const withdrawNumber = parseFloat(withdrawAmount);
 
-        //adding value in withdraw
+    document.getElementById('withdrawValue').value = '';
+
+        if(withdrawNumber>0){
+            //adding value in withdraw
         updateSpanText('currentWithdraw', withdrawNumber);
 
         // //removing value in balance
         updateSpanText('currentBalance', -1 * withdrawNumber);
 
-        document.getElementById('withdrawValue').value = '';
+        
+        }
   
 
 })
