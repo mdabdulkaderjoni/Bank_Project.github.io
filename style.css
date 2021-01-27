@@ -39,5 +39,6 @@ body{
     .email-area{
         position: relative;
         left:-80px;
+        width: 100%;
     }
   }
