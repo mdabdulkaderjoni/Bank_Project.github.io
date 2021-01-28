@@ -8,7 +8,6 @@ enterBtn.addEventListener('click', function () {
     const mainArea = document.getElementById('main');
     mainArea.style.display = 'block';
 
-
 });
 
 //function for events
@@ -69,11 +68,8 @@ withdrawBtn.addEventListener('click', function () {
 
         // //removing value in balance
         updateSpanText('currentBalance', -1 * withdrawNumber);
-
-        
+      
         }
-  
-
 })
 
 
